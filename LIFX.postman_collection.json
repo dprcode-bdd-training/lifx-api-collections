@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "238e8d4b-5aef-40cb-9371-38d5024adf37",
+		"name": "LIFX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALL LIGHTS",
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{AuthToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.lifx.com/v1/lights/all",
+					"protocol": "https",
+					"host": [
+						"api",
+						"lifx",
+						"com"
+					],
+					"path": [
+						"v1",
+						"lights",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TOGGLE STATE",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{AuthToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.lifx.com/v1/lights/all/toggle",
+					"protocol": "https",
+					"host": [
+						"api",
+						"lifx",
+						"com"
+					],
+					"path": [
+						"v1",
+						"lights",
+						"all",
+						"toggle"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "AuthToken",
+			"value": "--"
+		}
+	]
+}
